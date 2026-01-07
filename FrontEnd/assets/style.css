@@ -1,7 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -16,133 +12,205 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
+/* Forcer le display block pour les éléments HTML5 */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
+
+/* Retirer les puces des listes */
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
+
+/* Retirer les guillemets des citations */
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
+
+/* Uniformiser les tableaux */
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
-/** end reset css**/
+
+/* ==========================================================================
+   STYLES GÉNÉRAUX
+   ========================================================================== */
+
 body {
-	max-width: 1140px;
-	margin:auto;
-	font-family: 'Work Sans' ;
-	font-size: 14px;
-	background-color: #FFFEF8;
+    max-width: 1140px;           /* Largeur maximale du contenu */
+    margin: auto;                /* Centrage horizontal */
+    font-family: 'Work Sans';    /* Police principale */
+    font-size: 14px;
+    background-color: #FFFEF8;   /* Beige très clair */
 }
+
+/* En-tête : logo et navigation */
 header {
-	display: flex;
-	justify-content: space-between;
-	margin: 50px 0
+    display: flex;
+    justify-content: space-between;  /* Espacer logo et navigation */
+    margin: 50px 0;
 }
+
+/* Espacement des sections */
 section {
-	margin: 100px;
-	margin-bottom: 150px;
+    margin: 100px;
+    margin-bottom: 150px;
 }
 
-h1{
-	display: flex;
-	flex-direction: column;
-	font-family: 'Syne';
-	font-size: 22px;
-	font-weight: 800;
-	color: #B1663C
+/* ==========================================================================
+   TYPOGRAPHIE
+   ========================================================================== */
+
+/* Logo "Sophie Bluel" */
+h1 {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Syne';
+    font-size: 22px;
+    font-weight: 800;
+    color: #B1663C;              /* Marron/orange */
 }
 
+/* Sous-titre "Architecte d'intérieur" */
 h1 > span {
-	font-family: 'Work Sans';
-	font-size:10px;
-	letter-spacing: 0.1em;
-;
+    font-family: 'Work Sans';
+    font-size: 10px;
+    letter-spacing: 0.1em;       /* Espacement entre les lettres */
 }
 
-h2{
-	font-family: 'Syne';
-	font-weight: 700;
-	font-size: 30px;
-	color: #1D6154
+/* Titres de section */
+h2 {
+    font-family: 'Syne';
+    font-weight: 700;
+    font-size: 30px;
+    color: #1D6154;              /* Vert foncé */
 }
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
 nav ul {
-	display: flex;
-	align-items: center;
-	list-style-type: none;
-
+    display: flex;
+    align-items: center;
+    list-style-type: none;
 }
+
 nav li {
-	padding: 0 10px;
-	font-size: 1.2em;
+    padding: 0 10px;
+    font-size: 1.2em;
 }
 
 nav a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none;        /* Retirer le soulignement */
+    color: inherit;               /* Hériter de la couleur parente */
 }
 
+/* Effet hover sur les liens */
 nav a:hover {
     color: #B1663C;
 }
 
-
 li:hover {
-	color: #B1663C;
+    color: #B1663C;
 }
+
+/* ==========================================================================
+   SECTION INTRODUCTION
+   ========================================================================== */
+
 #introduction {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;         /* Centrage vertical */
 }
+
 #introduction figure {
-	flex: 1
+    flex: 1;                     /* Prend 50% de l'espace */
 }
+
 #introduction img {
-	display: block;
-	margin: auto;
-	width: 80%;
+    display: block;
+    margin: auto;
+    width: 80%;
 }
 
 #introduction article {
-	flex: 1
+    flex: 1;                     /* Prend 50% de l'espace */
 }
+
 #introduction h2 {
-	margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 #introduction p {
-	margin-bottom: 0.5em;
-}
-#portfolio h2 {
-	text-align: center;
-	margin-bottom: 0;
+    margin-bottom: 0.5em;
 }
 
-/* Filtres */
-.filters {
+/* ==========================================================================
+   SECTION PORTFOLIO
+   ========================================================================== */
+
+#portfolio h2 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* Titre avec bouton "modifier" */
+.portfolio-title {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 5em;
+}
+
+/* Lien "modifier" en mode édition */
+.modify-link {
+    font-family: 'Work Sans';
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.modify-link i {
+    font-size: 16px;
+}
+
+.modify-link:hover {
+    color: #1D6154;
+}
+
+/* ==========================================================================
+   FILTRES DE CATÉGORIES
+   ========================================================================== */
+
+.filters {
+    display: flex;
+    justify-content: center;     /* Centrer les boutons */
+    gap: 10px;                   /* Espacement entre les boutons */
     margin-bottom: 50px;
 }
 
@@ -153,34 +221,53 @@ li:hover {
     color: #1D6154;
     background-color: white;
     border: 1px solid #1D6154;
-    border-radius: 60px;
+    border-radius: 60px;         /* Boutons arrondis */
     padding: 9px 28px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;   /* Animation douce */
 }
 
+/* Effet hover */
 .filter-btn:hover {
     background-color: #1D6154;
     color: white;
 }
 
+/* Bouton actif */
 .filter-btn.active {
     background-color: #1D6154;
     color: white;
 }
 
-/* Légendes des images */
+/* Cacher les filtres en mode édition */
+.filters.hidden {
+    display: none;
+}
+
+/* ==========================================================================
+   GALERIE DE PROJETS
+   ========================================================================== */
+
+.gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  /* 3 colonnes égales */
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
 .gallery figure {
     margin: 0;
-	margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .gallery img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;           /* Remplir sans déformer */
 }
 
+/* Légendes sous les images */
 .gallery figcaption {
     font-size: 13px;
     color: #3D3D3D;
@@ -188,70 +275,68 @@ li:hover {
     font-family: 'Work Sans';
 }
 
+/* ==========================================================================
+   SECTION CONTACT
+   ========================================================================== */
 
-.gallery {
-	width: 100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-column-gap: 20px;
-	grid-row-gap: 20px;
-}
-
-.gallery img {
-	width: 100%;
-
-}
 #contact {
-	width: 50%;
-margin: auto;
+    width: 50%;
+    margin: auto;
 }
-#contact > * {
-	text-align: center;
 
+#contact > * {
+    text-align: center;
 }
-#contact h2{
-	margin-bottom: 20px;
+
+#contact h2 {
+    margin-bottom: 20px;
 }
+
 #contact form {
-	text-align: left;
-	margin-top:30px;
-	display: flex;
-	flex-direction: column;
+    text-align: left;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 #contact input {
-	height: 50px;
-	font-size: 1.2em;
-	border: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+    height: 50px;
+    font-size: 1.2em;
+    border: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
+
 #contact label {
-	margin: 2em 0 1em 0;
+    margin: 2em 0 1em 0;
 }
+
 #contact textarea {
-	border: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+    border: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 
-input[type="submit"]{
-	font-family: 'Syne';
-	font-weight: 700;
-	color: white;
-	background-color: #1D6154;
-	margin : 2em auto ;
-	width: 180px;
-	text-align: center;
-	border-radius: 60px ;
+/* Bouton "Envoyer" */
+input[type="submit"] {
+    font-family: 'Syne';
+    font-weight: 700;
+    color: white;
+    background-color: #1D6154;
+    margin: 2em auto;
+    width: 180px;
+    text-align: center;
+    border-radius: 60px;
 }
 
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
 
-/* Footer - barre blanche en bas */
 footer {
     background-color: white;
-    width: 100vw;
+    width: 100vw;                /* Prend toute la largeur de l'écran */
     position: relative;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Centrage absolu */
     padding: 15px 0;
     margin-top: 60px;
 }
@@ -264,7 +349,7 @@ footer nav {
 
 footer nav ul {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end;   /* Aligné à droite */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -276,7 +361,11 @@ footer nav li {
     font-family: 'Work Sans';
 }
 
-/* Barre mode édition */
+/* ==========================================================================
+   BARRE MODE ÉDITION
+   Visible uniquement pour les utilisateurs connectés
+   ========================================================================== */
+
 .edit-banner {
     background-color: #000000;
     width: 100vw;
@@ -301,60 +390,33 @@ footer nav li {
     font-size: 16px;
 }
 
-/* Titre portfolio avec bouton modifier */
-.portfolio-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 5em;
-}
+/* ==========================================================================
+   MODALE DE GESTION DES PROJETS
+   ========================================================================== */
 
-.modify-link {
-    font-family: 'Work Sans';
-    font-size: 14px;
-    color: #000;
-    text-decoration: none;
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-}
-
-.modify-link i {
-    font-size: 16px;
-}
-
-.modify-link:hover {
-    color: #1D6154;
-}
-
-/* Cacher les filtres en mode édition */
-.filters.hidden {
-    display: none;
-}
-
-/* Modale */
 .modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1000;
+    z-index: 1000;               /* Au-dessus de tout */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Fond sombre derrière la modale */
 .modal-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);  /* Noir avec 40% d'opacité */
 }
 
+/* Contenu de la modale */
 .modal-content {
     position: relative;
     background-color: white;
@@ -362,10 +424,11 @@ footer nav li {
     border-radius: 10px;
     max-width: 630px;
     width: 90%;
-    max-height: 90vh;
-    overflow-y: auto;
+    max-height: 90vh;            /* Maximum 90% de la hauteur de l'écran */
+    overflow-y: auto;            /* Scroll si contenu trop grand */
 }
 
+/* Bouton de fermeture (X) */
 .close-modal {
     position: absolute;
     top: 26px;
@@ -381,6 +444,7 @@ footer nav li {
     color: #1D6154;
 }
 
+/* Bouton retour (flèche) */
 .back-btn {
     position: absolute;
     top: 26px;
@@ -396,6 +460,7 @@ footer nav li {
     color: #1D6154;
 }
 
+/* Titre de la modale */
 .modal-content h3 {
     font-family: 'Work Sans';
     font-size: 26px;
@@ -405,16 +470,21 @@ footer nav li {
     margin-bottom: 46px;
 }
 
+/* Séparateur horizontal */
 .modal-content hr {
     border: none;
     border-top: 1px solid #B3B3B3;
     margin: 38px 0 32px;
 }
 
-/* Galerie modale */
+/* ==========================================================================
+   GALERIE MODALE (Vue 1)
+   Grille de 5 colonnes avec icônes de suppression
+   ========================================================================== */
+
 .modal-gallery {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);  /* 5 colonnes égales */
     gap: 10px;
     margin-bottom: 23px;
 }
@@ -429,6 +499,7 @@ footer nav li {
     object-fit: cover;
 }
 
+/* Icône de suppression (poubelle) */
 .delete-icon {
     position: absolute;
     top: 6px;
@@ -450,7 +521,10 @@ footer nav li {
     background-color: #1D6154;
 }
 
-/* Boutons */
+/* ==========================================================================
+   BOUTONS
+   ========================================================================== */
+
 .btn-primary {
     font-family: 'Syne';
     font-weight: 700;
@@ -466,15 +540,19 @@ footer nav li {
 }
 
 .btn-primary:hover {
-    background-color: #0E4B3B;
+    background-color: #0E4B3B;   /* Vert plus foncé */
 }
 
+/* Bouton désactivé */
 .btn-primary:disabled {
-    background-color: #A7A7A7;
+    background-color: #A7A7A7;   /* Gris */
     cursor: not-allowed;
 }
 
-/* Formulaire ajout photo */
+/* ==========================================================================
+   FORMULAIRE D'AJOUT DE PHOTO (Vue 2)
+   ========================================================================== */
+
 #add-work-form {
     display: flex;
     flex-direction: column;
@@ -499,9 +577,12 @@ footer nav li {
     margin-bottom: 21px;
 }
 
-/* Zone d'upload */
+/* ==========================================================================
+   ZONE D'UPLOAD D'IMAGE
+   ========================================================================== */
+
 .upload-zone {
-    background-color: #E8F1F6;
+    background-color: #E8F1F6;   /* Bleu très clair */
     border-radius: 3px;
     padding: 20px;
     text-align: center;
@@ -514,15 +595,17 @@ footer nav li {
     justify-content: center;
 }
 
+/* Icône d'image */
 .upload-zone i {
     font-size: 58px;
-    color: #B9C5CC;
+    color: #B9C5CC;              /* Gris bleuté */
     margin-bottom: 10px;
 }
 
+/* Bouton "+ Ajouter photo" */
 .upload-label {
-    background-color: #CBD6DC;
-    color: #306685;
+    background-color: #CBD6DC;   /* Gris bleuté */
+    color: #306685;              /* Bleu foncé */
     border-radius: 50px;
     padding: 10px 33px;
     font-family: 'Work Sans';
@@ -533,9 +616,10 @@ footer nav li {
 }
 
 .upload-label:hover {
-    background-color: #B3C2CC;
+    background-color: #B3C2CC;   /* Plus foncé au hover */
 }
 
+/* Texte d'information "jpg, png : 4mo max" */
 .upload-info {
     font-family: 'Work Sans';
     font-size: 10px;
@@ -543,19 +627,21 @@ footer nav li {
     margin: 0;
 }
 
+/* Image de prévisualisation */
 #preview-image {
     max-width: 100%;
     max-height: 169px;
-    object-fit: contain;
-    display: none;
+    object-fit: contain;         /* Conserver les proportions */
+    display: none;               /* Caché par défaut */
 }
 
-/* Quand il y a une image */
+/* Quand une image est uploadée */
 .upload-zone.has-image {
     padding: 0;
     overflow: hidden;
 }
 
+/* Cacher les éléments d'upload quand l'image est présente */
 .upload-zone.has-image i,
 .upload-zone.has-image .upload-label,
 .upload-zone.has-image .upload-info {

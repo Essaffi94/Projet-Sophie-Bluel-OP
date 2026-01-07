@@ -1,36 +1,47 @@
-/* Styles spécifiques à la page de login */
+/* ==========================================================================
+   STYLES SPÉCIFIQUES À LA PAGE DE LOGIN
+   ========================================================================== */
 
-/* Forcer le footer en bas pour la page login */
+/* Forcer le footer en bas de page même si peu de contenu */
 body {
-    min-height: 100vh;
+    min-height: 100vh;           /* Hauteur minimum = hauteur de l'écran */
     display: flex;
     flex-direction: column;
 }
 
 main {
-    flex: 1;
+    flex: 1;                     /* Prend tout l'espace disponible */
 }
 
+/* ==========================================================================
+   SECTION LOGIN
+   ========================================================================== */
 
 #login {
     width: 50%;
-    margin: 100px auto;
+    margin: 100px auto;          /* Centrage horizontal avec espacement */
 }
 
+/* Titre "Log In" */
 #login h2 {
     text-align: center;
     margin-bottom: 40px;
     font-family: 'Syne';
     font-weight: 700;
     font-size: 30px;
-    color: #1D6154;
+    color: #1D6154;              /* Vert foncé */
 }
+
+/* ==========================================================================
+   FORMULAIRE DE CONNEXION
+   ========================================================================== */
 
 #login-form {
     display: flex;
     flex-direction: column;
 }
 
+/* Labels des champs */
 #login-form label {
     margin: 2em 0 1em 0;
     font-family: 'Work Sans';
@@ -39,34 +50,41 @@ main {
     color: #3D3D3D;
 }
 
+/* Champs email et password */
 #login-form input[type="email"],
 #login-form input[type="password"] {
     height: 50px;
     font-size: 1.2em;
     border: none;
-    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);  /* Ombre portée */
     padding: 0 15px;
     font-family: 'Work Sans';
 }
 
+/* Bouton "Se connecter" */
 #login-form input[type="submit"] {
     font-family: 'Syne';
     font-weight: 700;
     color: white;
-    background-color: #1D6154;
+    background-color: #1D6154;   /* Vert */
     margin: 2em auto;
     width: 180px;
     text-align: center;
-    border-radius: 60px;
+    border-radius: 60px;         /* Arrondi */
     height: 36px;
     font-size: 14px;
     border: none;
     cursor: pointer;
 }
 
+/* Effet hover sur le bouton */
 #login-form input[type="submit"]:hover {
-    background-color: #0E4B3B;
+    background-color: #0E4B3B;   /* Vert plus foncé */
 }
+
+/* ==========================================================================
+   LIEN "MOT DE PASSE OUBLIÉ"
+   ========================================================================== */
 
 .forgot-password {
     text-align: center;
@@ -78,10 +96,13 @@ main {
 }
 
 .forgot-password:hover {
-    color: #1D6154;
+    color: #1D6154;              /* Vert au hover */
 }
 
-/* Style pour le lien actif dans la navigation */
+/* ==========================================================================
+   LIEN ACTIF DANS LA NAVIGATION
+   ========================================================================== */
+
 nav a.active {
-    font-weight: 600;
+    font-weight: 600;            /* Gras pour le lien actif */
 }

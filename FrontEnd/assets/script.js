@@ -288,3 +288,13 @@ async function init() {
         setupFilters();
     }
 }
+
+// message de succes formulaire de contact
+const contactForm = document.querySelector('#contact form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Merci ! Votre message a été envoyé avec succès.');
+        contactForm.reset();
+    });
+}
