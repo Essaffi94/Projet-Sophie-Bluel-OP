@@ -2,6 +2,13 @@
 document.getElementById('login-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     
+    // Récupérer le message d'erreur
+    const errorMessage = document.getElementById('error-message');
+    
+    // Masquer le message d'erreur précédent
+    errorMessage.style.display = 'none';
+    errorMessage.textContent = '';
+    
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     
@@ -22,13 +29,19 @@ document.getElementById('login-form').addEventListener('submit', async function(
             // Stocker le token dans le localStorage
             localStorage.setItem('token', data.token);
             localStorage.setItem('userId', data.userId);
+            
             // Redirection vers la page d'accueil
             window.location.href = 'index.html';
         } else {
-            alert('Erreur dans l\'identifiant ou le mot de passe');
+            // Afficher le message d'erreur sous le formulaire
+            errorMessage.textContent = 'Erreur : vérifier votre identifiant ou votre mot de passe';
+            errorMessage.style.display = 'block';
         }
+        
     } catch (error) {
         console.error('Erreur de connexion:', error);
-        alert('Erreur de connexion au serveur');
+        // Afficher un message d'erreur en cas de problème réseau
+        errorMessage.textContent = 'Erreur de connexion au serveur. Veuillez réessayer.';
+        errorMessage.style.display = 'block';
     }
 });

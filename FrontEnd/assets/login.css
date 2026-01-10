@@ -106,3 +106,35 @@ main {
 nav a.active {
     font-weight: 600;            /* Gras pour le lien actif */
 }
+
+/* ==========================================================================
+   MESSAGE D'ERREUR DE CONNEXION
+   ========================================================================== */
+
+.error-message {
+    color: #D65858;              /* Rouge pour indiquer une erreur */
+    font-family: 'Work Sans';
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 10px 0;
+    padding: 12px;
+    background-color: #FFE8E8;   /* Fond rouge très clair */
+    border-radius: 5px;
+    border: 1px solid #D65858;
+    
+    /* Animation d'apparition douce */
+    animation: slideDown 0.3s ease;
+}
+
+/* Animation pour faire apparaître le message */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
